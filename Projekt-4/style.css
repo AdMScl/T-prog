@@ -1,0 +1,138 @@
+@font-face {
+font-family: western;
+    src: url(../content/Projekt-4/fonts/WEST____.TTF);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+}
+
+.back img {
+    width: 100vw;
+}
+
+.back {
+    display: flex;
+    flex-direction: röow;
+    z-index: 0;
+}
+
+
+.nav-sign {
+    position: absolute;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px 0px 30px 0px;
+    margin: 0px;
+    width: 100vw;
+    gap: 5px;
+    z-index: 3;
+}
+
+.star-divider {
+    padding: 15px 0 0 3px;
+    width: 20px;
+}
+
+.star-divider img {
+    width: 20px;
+}
+
+nav a{
+    font-family: western;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #ffffffb3;
+    text-shadow: #000 0 4px 8px;
+}
+
+nav a:hover {
+    color: #ffffff81;
+    scale: 120%;
+}
+
+.sign-button-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100vw;
+    z-index: 1;
+}
+
+.sign-button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    padding: 25px 0px 0px 50px;
+}
+
+.sign {
+    display: flex;
+    justify-content: left;
+    width: fit-content;
+}
+
+.sign img {
+    width: 650px;
+}
+
+.button a {
+    text-decoration: none;
+    position: absolute;
+    text-align: center;
+    font-family: western;
+    font-size: 1.6rem;
+    color: #eeb90be1;
+    background: linear-gradient(to right, #eeb90be1, #fff875, #eeb90be1, #eeb90be1, #eeb90be1, #eeb90be1);
+    background-clip: text;
+    color: transparent;
+    background-size: 200%; 
+    animation: textAnimation 2s linear infinite;
+    z-index: 2;
+}
+
+.button a:hover {
+    color: #FCF556;
+}
+
+.button img {
+    width: 250px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 0px 0px 200px;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+footer img {
+    width: 100vw;
+}
+
+@keyframes textAnimation {
+    0%{
+        background-position: 200% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
