@@ -1,0 +1,53 @@
+@font-face {
+    font-family: A_VGA_2y;
+    src: url(Ac437_Acer_VGA_8x8-2y.ttf);
+}
+@font-face {
+    font-family: A_VGA_2x;
+    src: url(Ac437_IBM_BIOS-2x.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: A_VGA_2x;
+    text-align: center;
+    color: white;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skull, p {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        display: none;
+    }
+    .skull, p{
+        display: block;
+    }
+}

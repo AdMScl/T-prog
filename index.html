@@ -1,50 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Armadillo Guide</title>
+    <title>Min Webbsida</title>
+    <link rel="icon" type="image/x-icon" href="content/favicons/Skull_1.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/content/Projekt-4/dillo_icon_1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="back">
-        <img src="../content/Projekt-4/armadillo_pics/vintage_armadillo_1.png" alt="">
-        <div class="nav-sign">
-            <nav>
-                <div class="star-divider"><img src="../content/Projekt-4/signs_and_backdrops/star_1.svg" alt=""></div>
-                <a href="../index.html">Home</a>
-                <div class="star-divider"><img src="../content/Projekt-4/signs_and_backdrops/star_1.svg" alt=""></div>
-                <a href="quiz_intro_page/index.html">Quiz</a>
-                <div class="star-divider"><img src="../content/Projekt-4/signs_and_backdrops/star_1.svg" alt=""></div>
-                <a href="facts_page/index.html">Facts</a>
-                <div class="star-divider"><img src="../content/Projekt-4/signs_and_backdrops/star_1.svg" alt=""></div>
-                <a href="armadillo_interactive/index.html">Interactive</a>
-                <div class="star-divider"><img src="../content/Projekt-4/signs_and_backdrops/star_1.svg" alt=""></div>
-                <a href="">Gallery</a>
-                <div class="star-divider"><img src="../content/Projekt-4/signs_and_backdrops/star_1.svg" alt=""></div>
-            </nav>
-            <div class="sign-button-back">
-                <div class="sign-button">
-                    <div class="sign"><img src="../content/Projekt-4/signs_and_backdrops/main_sign_2.png" alt=""></div>
-                    <div class="button-back">
-                        <div class="button">
-                            <a href="welcome_page/index.html">
-                                <h1>START</h1>
-                            </a>
-                            <img src="../content/Projekt-4/signs_and_backdrops/start_btn.png" alt="">
-                        </div>
+<div class="main">
+<div class="back">
+    <div class="logo">
+        <img src="content/Custom-CP-Font-2.png" width="600" alt="mina-webbprojekt">
+    </div>
+        <div class="links">
+            <div class="link-1">
+                <a href="Ovningsuppgifter/Ovningsuppgifter.html">Övningsuppgifter</a>
+            </div>    
+                <div class="dropdown">
+                <div class="btn-container">
+                    <button class="dropbtn" onclick="myFunction()">Mina Projekt
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                </div>
+                <div class="dropdown-content" id="myDropdown">
+                    <div class="container">
+                    <a href="Projekt-1/smide.html" target="_blank">Projekt-1: Smide</a>
+                    <a href="Projekt-2/Fågelskådning.html" target="_blank">Projekt-2: beställning</a>
+                    <a href="Projekt-3/Internethistoria.html" target="_blank">Projekt-3: internethistoria</a>
+                    <a href="Projekt-4/index.html" target="_blank"><Projekt-4></Projekt-4>Projekt-4: Slutprojekt</a>
                     </div>
                 </div>
-            </div>
+                </div> 
+                </div>
         </div>
+</div>
 
-    </div>
-    <footer>
-        <img src="../content/Projekt-4/signs_and_backdrops/Footer.png" alt="">
-    </footer>
+<div id="vanta-bg"></div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xff3f3f,
+  backgroundColor: 0x0,
+  points: 20.00,
+  maxDistance: 26.00,
+  spacing: 14.00
+})
+
+</script>
+
 </body>
 
 </html>

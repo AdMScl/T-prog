@@ -1,138 +1,163 @@
-@font-face {
-font-family: western;
-    src: url(../content/Projekt-4/fonts/WEST____.TTF);
+body, html { 
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: rgb(255, 255, 255);
+#vanta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+#vanta-bg canvas {
+  pointer-events: none;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  height:100vh;
+  align-items: flex-start;
+  padding-top: 150px;
+}
+.back{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.614);
+  width: inherit;
+  padding: 30px;
+  z-index: 20;
+  gap: 50px;
 }
 
-.back img {
-    width: 100vw;
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  width: initial;
+  z-index: 30;
 }
 
-.back {
-    display: flex;
-    flex-direction: röow;
-    z-index: 0;
+.dropdown{
+  overflow: hidden;
 }
 
-
-.nav-sign {
-    position: absolute;
+.btn-container {
+  display: flex;
+  justify-content: center;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 30px 0px 30px 0px;
-    margin: 0px;
-    width: 100vw;
-    gap: 5px;
-    z-index: 3;
+.dropdown .dropbtn {
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+
+  font-size: 2rem;
+  color: aqua;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: none;
+  font-weight: 600;
+  font-style: none;
 }
 
-.star-divider {
-    padding: 15px 0 0 3px;
-    width: 20px;
+.dropdown-content{
+  display: none;
+  margin-top: 10px;
+  gap: 10px;
 }
 
-.star-divider img {
-    width: 20px;
+.dropdown-content a{
+  text-decoration: none;
+  color: aqua;
+  font-size: 2.3rem;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: none;
+  font-weight: 600;
+  font-style: none;
+  min-width: 200px;
+  width: inherit;
+  transition: 0.1s;
 }
 
-nav a{
-    font-family: western;
-    text-decoration: none;
-    font-size: 2rem;
-    color: #ffffffb3;
-    text-shadow: #000 0 4px 8px;
+.dropdown-content a:hover{
+  color: rgba(0, 255, 255, 0.5);
+  border-left: 4px solid aqua;
 }
 
-nav a:hover {
-    color: #ffffff81;
-    scale: 120%;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 440px;
 }
 
-.sign-button-back {
+.show {
+  display: block;
+}
+
+.dropbtn:hover {
+  cursor: pointer;
+  color: rgba(0, 255, 255, 0.516);
+}
+
+.links a{
+  text-decoration: none;
+  color: aqua;
+  font-size: 30px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: none;
+  font-weight: 600;
+  font-style: none;
+  margin: 0 0 10px 0;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  border-style: dashed;
+  border-color: aqua;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.744);
+  gap: 20px;
+  padding: 30px;
+  margin: auto;
+  z-index: 30;
+}
+
+.link-1 {
+  text-align: center;
+}
+
+.links a:hover{
+  color: rgba(0, 255, 255, 0.516);
+}
+
+@media (max-width: 600px) {
+  .navbar{
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    width: 100vw;
-    z-index: 1;
-}
-
-.sign-button {
+    background-color:none ;
+  }
+  .navbar-left{
+    justify-content: center;
+  }
+  .navbar-left img{
+    width: 350px;
+  }
+  .navbar-right{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    width: fit-content;
-    padding: 25px 0px 0px 50px;
-}
-
-.sign {
-    display: flex;
-    justify-content: left;
-    width: fit-content;
-}
-
-.sign img {
-    width: 650px;
-}
-
-.button a {
-    text-decoration: none;
-    position: absolute;
-    text-align: center;
-    font-family: western;
-    font-size: 1.6rem;
-    color: #eeb90be1;
-    background: linear-gradient(to right, #eeb90be1, #fff875, #eeb90be1, #eeb90be1, #eeb90be1, #eeb90be1);
-    background-clip: text;
-    color: transparent;
-    background-size: 200%; 
-    animation: textAnimation 2s linear infinite;
-    z-index: 2;
-}
-
-.button a:hover {
-    color: #FCF556;
-}
-
-.button img {
-    width: 250px;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 0px 0px 0px 200px;
-}
-
-footer {
-    margin: 0;
-    padding: 0;
-}
-
-footer img {
-    width: 100vw;
-}
-
-@keyframes textAnimation {
-    0%{
-        background-position: 200% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  body{
+    background-image: url(../content/CP-NC-3.jpg) ;
+    margin: 20px;
+  }
 }

@@ -1,0 +1,86 @@
+@font-face {
+  font-family: boneFont;
+  src: url(../content/HalloweenBones-e9vjB.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  background-color: black;
+  background-image: url(../content/Homepage/blue-flame-skull.jpg);
+  margin: 0;
+  padding: 0;
+}
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+header h1{
+  color: rgb(2, 215, 242);
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.boxes{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+.row1{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.row2{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.row3{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box{
+  width: 500px;
+  margin: 10px;
+  padding: 20px;
+  transition: transform .2s;
+  border-style: groove;
+  border-color: rgb(55, 0, 255);
+  background-color: rgba(0, 0, 0, 0.815);
+  border-width: 10px;
+}
+.box:hover{
+  transform: scale(1.1);
+  opacity: 10px;
+}
+.box a{
+  text-decoration: none;
+  font-family: boneFont;
+  color: rgb(2, 215, 242);
+}
+.box a h3{
+  text-align: center;
+}
+.box a:hover{
+  color:  rgba(2, 214, 242, 0.58);
+}
+
+

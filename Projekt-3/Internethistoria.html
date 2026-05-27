@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internethistoria-Adomas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="Internethistoria.css">
+    <link rel="icon" type="image/x-icon" href="../content/Projekt-3/pcPxI.png">
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="info-main.html"><h1>INTERNETHISTORIA</h1></a>
+        <h2>Internetutvecklingen och dess samhälleliga effekter</h2>
+    </div>
+    <nav>
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">
+    <i id="menuBtn" class="fa-solid fa-bars"></i>
+    </button>
+    <div id="myDropdown" class="dropdown-content">
+    <a href="../index.html">Hem</a>
+    <a href="#about">Flera projekt</a>
+    <a href="#contact">Kontakt</a> 
+    </div>
+    </div>
+    </nav>
+</header>
+
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+  particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('Particles loaded with interaction and lines!');
+  });
+</script>
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      const dropdown = document.getElementById("myDropdown");
+      const btn = document.querySelector(".dropbtn i");
+
+      // Toggle dropdown
+      dropdown.classList.toggle("show");
+
+      // Toggle button background
+      btn.closest('.dropbtn').classList.toggle("active");
+
+      // Toggle icon (keep fa-solid)
+      if (btn.classList.contains("fa-bars")) {
+        btn.classList.remove("fa-bars");
+        btn.classList.add("fa-xmark");
+      } else {
+        btn.classList.remove("fa-xmark");
+        btn.classList.add("fa-bars");
+    }
+  }
+  
+  function toggleMenu() {
+    const btn = document.getElementById("menuBtn");
+
+    btn.classList.toggle("fa-bars");   // hamburger
+    btn.classList.toggle("fa-xmark");  // close icon
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.closest('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    // Reset button background
+          const btn = document.querySelector(".dropbtn i");
+          btn.closest('.dropbtn').classList.remove("active");
+
+          // Reset icon to hamburger
+          btn.classList.add("fa-bars");
+          btn.classList.remove("fa-xmark");
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

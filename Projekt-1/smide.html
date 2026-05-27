@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smide</title>
+    <link rel="icon" type="image/x-icon" href="content/HS-logo.png">
+    <link rel="stylesheet" href="smide-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-left">
+        <img src="../content/Projekt-1/HS-logo.png" alt="">
+        <h3>HAGTORP SMEDJA</h3>
+        </div>
+
+        <div class="nav-right">
+            <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><img src="../content/Projekt-1/icons8-hamburger-menu-30.png" alt=""></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../index.html">Hem</a>
+                <a href="#">Kontakt</a>
+                <a href="#"></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg">
+    <img src="../content/projekt-1/smide-bg-2.png" alt="">
+    </div>
+
+
+    <div class="main-title">
+    <div class="title">
+        <p>SMIDE</p>
+    </div>  
+    <div class="title">
+        <P>KONSTEN OCH HANTVERKET</P>
+    </div>
+    </div>
+    <div class="boxes">
+        <div class="box">
+          <a href="info-smide.html">
+            <img src="../content/Projekt-1/anvil-icon.png" alt="">
+            <p>Vad är smide?</p>
+          </a>
+          </div>
+        <div class="box">
+          <a href="konst-smide.html">
+            <img src="../content/Projekt-1/Group 2.png" alt="">
+            <p>Konstnärlig smide</p>
+          </a>
+          </div>
+        <div class="box">
+          <a href="framtid-smide.html">
+            <img src="../content/Projekt-1/future-icon.png" alt="">
+            <p>Smidets framtid</p>
+          </a>
+        </div>
+    </div>
+
+
+<script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

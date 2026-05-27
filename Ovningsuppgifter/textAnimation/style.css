@@ -1,0 +1,46 @@
+body, html{
+    padding: none;
+    margin: none;
+}
+
+@font-face {
+    font-family: ACERVGA;
+    src: url(Ac437_Acer_VGA_8x8-2y.ttf);
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: black;
+    }
+}
+
+.container h1{
+    font-family: ACERVGA;
+    font-size: 100px;
+    color: aliceblue;
+    background: linear-gradient(to right, orange, green, blue, purple, orange);
+    background-clip: text;
+    color: transparent;
+    background-size: 200%; 
+    animation: textAnimation 2s linear infinite;
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+@keyframes textAnimation {
+    0%{
+        background-position: 200% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+

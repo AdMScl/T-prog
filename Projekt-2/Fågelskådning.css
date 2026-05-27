@@ -1,0 +1,91 @@
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(125, 172, 69);
+}
+.logo img{
+    width: 250px;
+    padding: 5px 5px 5px 15px;
+}
+body{
+    margin: 0;
+    background-color: rgb(125, 172, 69);
+}
+
+.dropbtn {
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+    transition: background 0.2s;
+    color: #2D3F27;
+}
+
+.dropbtn i {
+    font-size: 40px;
+    transform: scale(1.4);
+}
+
+.dropbtn.active i {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    transform: scale(1.4);
+}
+
+.dropbtn.active {
+  background-color: rgba(91, 125, 50, 0.616);
+  color: #2D3F27;               /*change icon color */
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    z-index: 1;
+}
+.button{
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:rgba(91, 125, 50, 0.616);
+    min-width: 100px;
+    right: 0;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 2;
+}
+.dropdown-content.show {
+display: block;
+}
+.dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+}
+.back{
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+.back img{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 350px;
+    top: 120px;
+}
+.foreground{
+    background-color: #2D3F27;
+    z-index: 3;
+}

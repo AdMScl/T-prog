@@ -1,0 +1,107 @@
+body{
+    background-color: black;
+}
+.animation-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+}
+.ball{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 100%;
+    animation: rollBall 5s linear infinite;
+}
+
+@keyframes rollBall {
+    0% {
+        top: 85vh;
+        left: 0;
+    }
+    5% {
+        top: 85vh;
+        left: 62.5px;
+    }
+    10% {
+        top: 85vh;
+        left: 125px;
+    }
+    15% {
+        top: 85vh;
+        left: 187.5px;
+    }
+    20% {
+        top: 85vh;
+        left: 250px;
+    }
+    25% {
+        top: 85vh;
+        left: 312.5px;
+    }
+    30% {
+        top: 75vh;
+        left: 375px;
+    }
+    35% {
+        top: 65vh;
+        left: 437.5px;
+    }
+    40% {
+        top: 55vh;
+        left: 500px;
+    }
+    45% {
+        top: 45vh;
+        left: 562.5px;
+    }
+    50% {
+        top: 35vh;
+        left: 625px;
+    }
+    55% {
+        top: 25vh;
+        left: 687.5px;
+    }
+    60% {
+        top: 25vh;
+        left: 750px;
+    }
+    65% {
+        top: 35vh;
+        left: 812.5px;
+    }
+    70% {
+        top: 45vh;
+        left: 875px;
+    }
+    75% {
+        top: 55vh;
+        left: 937.5px;
+    }
+    80% {
+        top: 65vh;
+        left: 1000px;
+    }
+    85% {
+        top: 75vh;
+        left: 1062.5px;
+    }
+    90% {
+        top: 85vh;
+        left: 1125px;
+    }
+    95% {
+        top: 85vh;
+        left: 1187.5px;
+    }
+    100% {
+        top: 85vh;
+        left: 1250px;
+    }
+}
+
+

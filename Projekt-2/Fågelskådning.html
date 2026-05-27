@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fågelskådning</title>
+  <link rel="stylesheet" href="Fågelskådning.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    #menuBtn {
+      font-size: 40px;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="">
+      <img src="../content/Projekt-2/LOGO-2.png" alt="">
+  </div>
+  </a>
+
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">
+    <i id="menuBtn" class="fa-solid fa-bars"></i>
+    </button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      const dropdown = document.getElementById("myDropdown");
+      const btn = document.querySelector(".dropbtn i");
+
+      // Toggle dropdown
+      dropdown.classList.toggle("show");
+
+      // Toggle button background
+      btn.closest('.dropbtn').classList.toggle("active");
+
+      // Toggle icon (keep fa-solid)
+      if (btn.classList.contains("fa-bars")) {
+        btn.classList.remove("fa-bars");
+        btn.classList.add("fa-xmark");
+      } else {
+        btn.classList.remove("fa-xmark");
+        btn.classList.add("fa-bars");
+    }
+  }
+  
+  function toggleMenu() {
+    const btn = document.getElementById("menuBtn");
+
+    btn.classList.toggle("fa-bars");   // hamburger
+    btn.classList.toggle("fa-xmark");  // close icon
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.closest('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    // Reset button background
+          const btn = document.querySelector(".dropbtn i");
+          btn.closest('.dropbtn').classList.remove("active");
+
+          // Reset icon to hamburger
+          btn.classList.add("fa-bars");
+          btn.classList.remove("fa-xmark");
+        }
+      }
+    }
+  }
+</script>
+</nav>
+
+<div class="main">
+  
+  <div class="foreground">
+    <h1>FÅGELSKÅDNING</h1>
+    <h1>INFO & GUIDE</h1>
+  </div>
+<div class="back">
+  <img src="../content/Projekt-2/Book.png" alt="">
+</div>
+
+
+</div>
+
+</body>
+
+</html>

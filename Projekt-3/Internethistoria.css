@@ -1,0 +1,172 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*  -------
+     FONTS
+    -------
+*/
+@font-face {
+  font-family:DOSVGA;
+  src: url(../content/Projekt-3/PerfectDOSVGA437Win.ttf);
+}
+
+/*  ------
+     LOGO 
+    ------ 
+*/ 
+.logo{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo h1{
+  height: 25px;
+  color: white;
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+  cursor: pointer;
+  animation: textAnim 2s linear;
+  text-shadow: 2px 2px 4px #252dff;
+}
+.logo h2{
+  color: rgb(144, 226, 251);
+  text-shadow: 2px 2px 4px #000000cb;
+  animation: textAnim1 2.5s linear;
+  font-family: DOSVGA;
+}
+
+.logo a{
+  text-decoration: none;
+}
+
+.logo h1:hover{
+    transform: scale(1.1);
+    transition: 0.25s;
+}
+
+
+/*  ----------
+      NAVBAR 
+    ----------*/
+nav{
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  top: 0%;
+  display: flex;
+  height: 40px;
+  width: 100vw;
+  z-index: 2;
+}
+
+
+/*  --------------------------
+     DROPDOWN BUTTON AND MENU 
+    --------------------------
+*/
+.dropdown{
+  padding: 20px;  
+}
+
+.dropbtn {
+    font-size: 100px;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+    transition: background 0.2s;
+    color: #1584ce;
+}
+
+.dropbtn i {
+    font-size: 40px;
+    display: flex;
+}
+
+.dropbtn.active i {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.dropbtn.active {
+  background-color: #1584ce00;
+  color: #1584ce;               /*change icon color */
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:#1584ce00;
+    border-radius: 15px;
+    border-style: dashed;
+    border-color: #1584ce;
+    min-width: 100px;
+    right: 0;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 2;
+}
+.dropdown-content.show {
+display: block;
+}
+.dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #1584ce;
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+}
+.dropdown-content a:hover{
+  color: #1372b1;
+}
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*  -------------------
+     MOVING BACKGROUND
+    -------------------
+*/
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background: linear-gradient(135deg, #0a0f24, #051937);
+}
+
+/* ------------
+    ANIMATIONS
+   ------------
+*/
+@keyframes textAnim1 {
+  0%{
+    color:rgba(249, 131, 131, 0);
+  }
+  100%{
+    color:rgb(144, 226, 251) ;
+  }
+}

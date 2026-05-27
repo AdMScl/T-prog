@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: coral;
+    padding: 20px 30px;
+    height: 8vh;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+#sect-1 {
+    min-height: 100vh;
+    background-color: brown;
+    padding-top: 8vh;
+}
+
+#sect-2 {
+    min-height: 100vh;
+    background-color: aqua;
+    padding-top: 8vh;
+}
+
+#sect-3 {
+    min-height: 100vh;
+    background-color: rgb(255, 0, 0);
+    padding-top: 8vh;
+}
+
+#sect-4 {
+    min-height: 100vh;
+    background-color: chartreuse;
+    padding-top: 8vh;
+}
